@@ -74,7 +74,6 @@ class DonationTaxReceipt(models.Model):
         '''This method is inherited in donation and donation_sale
         It is called by the tax.receipt.annual.create wizard'''
 
-    @api.multi
     def action_send_tax_receipt(self):
         self.ensure_one()
         if not self.partner_id.email:
@@ -101,7 +100,6 @@ class DonationTaxReceipt(models.Model):
             }
         return action
 
-    @api.multi
     def action_print(self):
         self.ensure_one()
         return self.env.ref('donation_base.report_donation_tax_receipt'

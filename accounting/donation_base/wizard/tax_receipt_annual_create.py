@@ -48,7 +48,6 @@ class TaxReceiptAnnualCreate(models.TransientModel):
         vals.update(partner_dict['extra_vals'])
         return vals
 
-    @api.multi
     def generate_annual_receipts(self):
         self.ensure_one()
         logger.info(

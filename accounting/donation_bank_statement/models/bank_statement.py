@@ -103,7 +103,6 @@ class AccountBankStatement(models.Model):
                             donation.line_ids.product_id_change()
                             donation_ids.append(donation.id)
 
-    @api.multi
     def button_confirm_bank(self):
         for stmt in self.filtered(lambda st: st.state == 'open'):
             stmt.create_donations()

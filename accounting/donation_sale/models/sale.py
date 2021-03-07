@@ -74,7 +74,6 @@ class SaleOrder(models.Model):
             self.tax_receipt_option = 'annual'
         return res
 
-    @api.multi
     def _prepare_invoice(self):
         vals = super(SaleOrder, self)._prepare_invoice()
         vals['tax_receipt_option'] = self.tax_receipt_option

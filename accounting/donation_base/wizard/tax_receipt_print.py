@@ -23,7 +23,6 @@ class DonationTaxReceiptPrint(models.TransientModel):
         default=_get_receipts
     )
 
-    @api.multi
     def print_receipts(self):
         self.ensure_one()
         if not self.receipt_ids:

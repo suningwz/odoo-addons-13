@@ -79,7 +79,6 @@ class AccountInvoice(models.Model):
         }
         return vals
 
-    @api.multi
     def action_cancel(self):
         res = super(AccountInvoice, self).action_cancel()
         for inv in self:
@@ -92,7 +91,6 @@ class AccountInvoice(models.Model):
                     % inv.tax_receipt_id.number)
         return res
 
-    @api.multi
     def unlink(self):
         for inv in self:
             if inv.tax_receipt_id:
@@ -119,7 +117,6 @@ class AccountInvoice(models.Model):
             self.tax_receipt_option = 'annual'
         return res
 
-    @api.multi
     def action_invoice_paid(self):
         res = super(AccountInvoice, self).action_invoice_paid()
         dtro = self.env['donation.tax.receipt']
