@@ -1,0 +1,83 @@
+<odoo>
+    <template id="debranding_title" name="Debranding title JS" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/odoo-debrand/static/src/js/title.js"/>
+        </xpath>
+    </template>
+
+    <template id="debranding_dialog" name="Debranding Dialogs" inherit_id="web.assets_common">
+        <xpath expr="//script[@src='/web/static/src/js/core/dialog.js']" position="replace">
+            <script type="text/javascript" src="/odoo-debrand/static/src/js/dialog.js"></script>
+        </xpath>
+        <xpath expr="//script[@src='/web/static/src/js/core/owl_dialog.js']" position="replace">
+            <script type="text/javascript" src="/odoo-debrand/static/src/js/owl_dialog.js"></script>
+        </xpath>
+        <xpath expr="//script[@src='/web/static/src/js/services/crash_manager.js']" position="replace">
+            <script type="text/javascript" src="/odoo-debrand/static/src/js/crash_manager.js"></script>
+        </xpath>
+    </template>
+
+    <template id="mail_bot_debrand" name="Customize mailbot avatar" inherit_id="mail.assets_backend">
+        <xpath expr="//script[@src='/mail/static/src/components/message/message.js']" position="replace">
+            <script type="text/javascript" src="/odoo-debrand/static/src/js/message.js"></script>
+        </xpath>
+    </template>
+
+    <template id="title_debrand" inherit_id="web.layout">
+        <xpath expr="//head" position="replace">
+            <head>
+                <meta charset="utf-8"/>
+                <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+
+                <title t-esc="title or 'Dashboard'"/>
+                <link type="image/x-icon" rel="shortcut icon" t-att-href="x_icon or '/web/static/src/img/favicon.ico'"/>
+
+                <script type="text/javascript">
+                    var odoo = {
+                    csrf_token: "<t t-esc="request.csrf_token(None)"/>",
+                    debug: "<t t-esc="debug"/>",
+                    };
+                </script>
+
+                <t t-raw="head or ''"/>
+            </head>
+        </xpath>
+    </template>
+
+    <!-- <template id="login_layout" inherit_id="web.login_layout">
+        <xpath expr="//div[@class='text-center']" position="replace">
+           <div class="text-center" t-if="not disable_footer">
+                <t t-if="not disable_database_manager">
+                    <a class="" href="/web/database/manager">Manage Databases</a> |
+                    theGleam.tech
+                </t>
+           </div>
+        </xpath>
+    </template> -->
+
+    <!-- <template id="login_layout_im_livechat" inherit_id="im_livechat.support_page">
+        <xpath expr="//body" position="replace">
+            <body>
+                <div class="main" style="opacity: 1;">
+                    <h1 class="channel_name"><t t-esc="channel.name"/></h1>
+                    <div>Website Live Chat Powered by <strong><t t-esc="request.env['website'].sudo().search([])[0].company_name or ''"/></strong></div>
+                </div>
+            </body>
+        </xpath>
+    </template> -->
+
+    <template id="portal_record_sidebar" inherit_id="portal.portal_record_sidebar" name="My Portal Record Sidebar">
+        <xpath expr="//div[contains(text(),'Powered by')]" position="replace">
+            <div class="card-footer small text-center text-muted border-top-0 pt-1 pb-1 d-none d-lg-block">
+                Designed by <a target="_blank" href="http://www.thegleam.tech?utm_source=db&amp;utm_medium=portal" title="thegleam.tech">theGleam</a>
+            </div>
+         </xpath>
+    </template>
+
+
+    <template id="debrand_promotion" inherit_id="web.brand_promotion">
+        <xpath expr="//t[@t-call='web.brand_promotion_message']" position="replace"/>
+    </template>
+
+</odoo>

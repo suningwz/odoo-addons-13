@@ -1,0 +1,38 @@
+id,country_id:id,name,code
+state_ng_1,base.ng,Abia,1
+state_ng_2,base.ng,Adamawa,2
+state_ng_3,base.ng,Akwa Ibom,3
+state_ng_4,base.ng,Anambra,4
+state_ng_5,base.ng,Bauchi,5
+state_ng_6,base.ng,Bayelsa,6
+state_ng_7,base.ng,Benue,7
+state_ng_8,base.ng,Borno,8
+state_ng_9,base.ng,Cross River,9
+state_ng_10,base.ng,Delta,10
+state_ng_11,base.ng,Ebonyi,11
+state_ng_12,base.ng,Edo,12
+state_ng_13,base.ng,Ekiti,13
+state_ng_14,base.ng,Enugu,14
+state_ng_15,base.ng,Gombe,15
+state_ng_16,base.ng,Imo,16
+state_ng_17,base.ng,Jigawa,17
+state_ng_18,base.ng,Kaduna,18
+state_ng_19,base.ng,Kano,19
+state_ng_20,base.ng,Katsina,20
+state_ng_21,base.ng,Kebbi,21
+state_ng_22,base.ng,Kogi,22
+state_ng_23,base.ng,Kwara,23
+state_ng_24,base.ng,Lagos,24
+state_ng_25,base.ng,Nasarawa,25
+state_ng_26,base.ng,Niger,26
+state_ng_27,base.ng,Ogun,27
+state_ng_28,base.ng,Ondo,28
+state_ng_29,base.ng,Osun,29
+state_ng_30,base.ng,Oyo,30
+state_ng_31,base.ng,Plateau,31
+state_ng_32,base.ng,Rivers,32
+state_ng_33,base.ng,Sokoto,33
+state_ng_34,base.ng,Taraba,34
+state_ng_35,base.ng,Yobe,35
+state_ng_36,base.ng,Zamfara,36
+state_ng_37,base.ng,Federal Capital Territory (FCT),37

@@ -1,0 +1,86 @@
+<odoo>
+
+    <data>
+
+        <!-- <template id="mail_notification_paynow" inherit_id="mail.mail_notification_paynow">
+        <xpath expr="//p[last()]" position="replace">
+            <p>
+                Designed by
+                <a t-att-href="https://thegleam.tech">
+                    <t t-esc="theGleam" />
+                </a>
+                .
+            </p>
+        </xpath>
+    </template> -->
+
+        <!-- <template id="hr_expense.hr_expense_template_register_no_user">
+            <xpath expr="//div//table[last()]" position="replace">
+                <table style="width:600px;margin:0px auto;background:white;border:1px solid #e1e1e1;">
+                    <tbody>
+                        <tr>
+                            <td style="padding:15px 20px 10px 20px;">
+                                <t t-call="hr_expense.hr_expense_template_register" />
+                                <p style="color:#9E588B;">
+                                    Designed by
+                                    <a target="_blank" href="https://thegleam.tech">theGleam</a>
+                                    .
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </xpath>
+        </template> -->
+
+        <template id="im_livechat.livechat_email_template">
+            <xpath expr="//table//tr[last()]" position="replace">
+                <tr>
+                    <td align="center" style="min-width: 590px;">
+                        Designed by
+                        <a target="_blank" href="https://thegleam.tech?utm_source=db&amp;utm_medium=email" style="color: #875A7B;">theGleam</a>
+                    </td>
+                </tr>
+            </xpath>
+        </template>
+
+
+        <template id="mail.mail_notification_borders">
+            <xpath expr="//table//tr[last()]" position="replace">
+                <tr>
+                    <td align="center" style="padding: 8px; font-size:11px">
+                        Designed by
+                        <a target="_blank" href="https://thegleam.tech?utm_source=db&amp;utm_medium=email" style="color: #875A7B;">theGleam</a>
+                    </td>
+                </tr>
+            </xpath>
+        </template>
+
+        <template id="mail.mail_notification_light">
+            <xpath expr="//table//tr[last()]" position="replace">
+                <tr>
+                    <td align="center" style="min-width: 590px;">
+                        Designed by
+                        <a target="_blank" href="https://thegleam.tech?utm_source=db&amp;utm_medium=email" style="color: #875A7B;">theGleam</a>
+                    </td>
+                </tr>
+            </xpath>
+        </template>
+
+
+        <!-- <template id="mail_notification_paynow" inherit_id="mail.mail_notification_paynow">
+            
+            <xpath expr="//table/tr[last()]" position="replace">
+                <tr>
+                    <td align="center" style="min-width: 590px; padding: 8px; font-size:11px;">
+                        Designed by
+                        <a target="_blank" href="https://thegleam.tech?utm_source=db&amp;utm_medium=email" style="color: #875A7B;">theGleam</a>
+                    </td>
+                </tr>
+            </xpath>
+        </template> -->
+
+
+    </data>
+
+</odoo>

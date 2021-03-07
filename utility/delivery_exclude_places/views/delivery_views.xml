@@ -1,0 +1,13 @@
+<odoo>
+    <record id="view_delivery_carrier_form" model="ir.ui.view">
+        <field name="name">delivery.carrier.form</field>
+        <field name="model">delivery.carrier</field>
+        <field name="inherit_id" ref="delivery.view_delivery_carrier_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='country_details']" position="inside">
+                <field name="exclude_country_ids" widget="many2many_tags"/>
+                <field name="exclude_state_ids" widget="many2many_tags"/>
+            </xpath> 
+        </field>
+    </record>
+</odoo>

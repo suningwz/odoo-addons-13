@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="acquirer_form_paystack" model="ir.ui.view">
+        <field name="name">payment.acquirer.form.inherit</field>
+        <field name="model">payment.acquirer</field>
+        <field name="inherit_id" ref="payment.acquirer_form"/>
+        <field name="arch" type="xml">
+            <xpath expr='//group[@name="acquirer"]' position='inside'>
+                <group attrs="{'invisible': [('provider', '!=', 'paystack')]}">
+                    <field name="paystack_secret_key" attrs="{'required':[ ('provider', '=', 'paystack'), ('state', '!=', 'disabled')]}" password="True"/>
+                    <field name="paystack_public_key" attrs="{'required':[ ('provider', '=', 'paystack'), ('state', '!=', 'disabled')]}" password="True"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
