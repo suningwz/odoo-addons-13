@@ -5,13 +5,13 @@
 {
     'name': 'Donation Base',
     'version': '11.0.1.0.0',
-    'category': 'Accounting & Finance',
+    'category': 'Accounting',
     'license': 'AGPL-3',
     'summary': 'Base module for donations',
     'author': 'Barroux Abbey, Akretion, Odoo Community Association (OCA)',
     'website': 'https://github.com/OCA/donation',
     'depends': [
-        'account_invoicing',
+        'account',
     ],
     'data': [
         'security/ir.model.access.csv',
