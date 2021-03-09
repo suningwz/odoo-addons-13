@@ -37,21 +37,3 @@ class ResConfigSettings(models.TransientModel):
     mail_theme_primary = fields.Char(
         string="Mail Brand Color", default="#875A7B"
     )
-
-    def create(self, values):
-        # values.update({"old_mail_theme_primary": self.theme_color_brand})
-        print("--------------------------------creater------------------------------------")
-        print(values["mail_theme_primary"])
-        print(self.mail_theme_primary)
-        print("--------------------------------------------------------------------")
-        res = super(ResConfigSettings, self).create(values)
-        return res
-
-    def write(self, values):
-        # values.update({"old_mail_theme_primary": self.theme_color_brand})
-        print("--------------------------------------------------------------------")
-        print(values)
-        print("--------------------------------------------------------------------")
-        res = super(ResConfigSettings, self).write(values)
-        return res
-    

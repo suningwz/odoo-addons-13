@@ -38,10 +38,12 @@
                             <div class="text-muted">
                                 Set the main theme colors
                             </div>
+                            <t t-set="settings" t-value="env.ref('res.config.settings')"/>
                             <div class="content-group">
                                 <div class="mt16 row">
                                     <label for="mail_theme_primary" string="Mail Brand Color" class="col-3 o_light_label" />
                                     <field name="mail_theme_primary" widget="color" class="oe_inline" />
+                                    <field name="old_mail_theme_primary" value="settings.mail_theme_primary" type="hidden"/>
                                 </div>
                             </div>
                         </div>

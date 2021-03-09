@@ -109,15 +109,10 @@ class MailMail(models.AbstractModel):
     @api.model_create_multi
     def create(self, values_list):
         for index, _value in enumerate(values_list):
-            body_html = self.env[
+            values_list[index]["body_html"] = self.env[
                 "mail.render.mixin"
-            ]
-            body_html = body_html.remove_href_odoo(
-                body_html, remove_parent=0, remove_before=1
+            ].remove_href_odoo(
+                values_list[index]["body_html"], remove_parent=0, remove_before=1
             )
-            body_html = body_html.update_brand_color(
-                body_html
-            )
-            values_list[index]["body_html"] = body_html
 
         return super().create(values_list)
